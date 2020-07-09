@@ -1,0 +1,144 @@
+
+*
+{
+    box-sizing : border-box;
+    margin     : 0;
+    padding    : 0;
+    font-family: sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+
+@media print
+{
+    @page
+    {
+        size : A4 portrait;
+
+    }
+
+    .a-page
+    {
+        float             : left;
+        page-break-inside : avoid;
+    } 
+
+    body
+    {
+        background : #fff!important; 
+    }  
+}
+
+body
+{
+    background : rgb( 204, 204, 204 ); 
+}
+
+.a-page
+{
+    background : white;
+    display    : block;
+    height     : 29.7cm; 
+    margin     : auto;
+    width      : 21cm;
+}
+
+.buffer-region /* margem entre duas paginas */
+{
+    min-height : 20px;
+}
+
+
+
+.fc_sm /* font do container */
+{
+    font-size : 1em;
+    left      : 50%;
+    margin    : 0;
+    position  : absolute;
+    top       : 50%;
+    transform : translate(-50%, -50%);
+}
+
+.grid-container /* ul */
+{
+    list-style-type : none;
+    width           : 100%;
+    padding: 1cm;
+    height: 29.7cm;
+}
+
+.container /* divs dentro das li */
+{
+    width  : 100%;
+    float    : left;
+    height   : 100%;
+    position : relative;
+}
+
+.grid-container .container /* preenche a li verticalmente */
+{
+
+}
+
+.pagina {
+    height: 27.7cm;
+}/*
+.aih-paciente {
+    height: 5cm;
+}
+.aih-justificativa {
+    height: 5cm;
+}
+.aih-procedimento {
+    height: 5cm;
+}
+.aih-footer {
+    height: 5cm;
+}
+*/
+
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+}
+.row-5 {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.row-6 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+
+.c1 { grid-column: auto / span 1; }
+.c2 { grid-column: auto / span 2; }
+.c3 { grid-column: auto / span 3; }
+.c4 { grid-column: auto / span 4; }
+.c5 { grid-column: auto / span 5; }
+.c6 { grid-column: auto / span 6; }
+.c7 { grid-column: auto / span 7; }
+.c8 { grid-column: auto / span 8; }
+.pront { padding: .5cm }
+.logohdml {height: 2cm;}
+.laudo { text-align: center; font-size: 10px; }
+.title {  padding: 5px; font-weight: bold;}
+.form { display: flex; flex-flow: column; justify-content: center; align-content: center; padding: 2px; }
+.formcontent { font-size: 14px; padding: 3px; text-transform: uppercase; border-bottom: 1px dotted #000; height: 20px; text-align: left; display: block;}
+.formcheckinline { border: 0px; font: 12px; text-align: left; }
+.formcheckinline input { margin-left: 5px;}
+.formlabel { font-size: 8px; height: 10px; text-align: left; }
+.formbox { border: 1px dotted #000; padding: 4px; }
+.formlines { height: 25px; border-bottom: 1px dotted #000; }
+.r1 { height: 1cm; } .r2 { height: 2cm; } .r3 { height: 2.5cm; }
+
+label { font-size: 10px; height: 10px; text-align: left; padding: 2px; display: inline-block; }
+
+table { border-collapse: collapse;} 
+th, tr, td {  border: 1px dotted; padding: 2px; height: 25px; }
+.fat-table { width: 19cm; }
+.fat-row { width: 19cm; margin: 0; padding: 0; }
+.fat-row span { text-align: left; }
+.fat-col1 { width: 5cm; }
+.fat-col2 { width: 3cm; }
