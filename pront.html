@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <base target="_self">
+        <meta name    = "viewport"
+              content = "width=device-width, initial-scale=1.0"
+        >
+
+        <style type = "text/css">
+            *
+            {
+                box-sizing : border-box;
+                margin     : 0;
+                padding    : 0;
+                font-family: sans-serif;
+                font-size: 12px;
+                text-align: center;
+            }
+
+            @media print
+            {
+                @page
+                {
+                    size : A4 portrait;
+                }
+                
+                body
+                {
+                    background : #fff!important; 
+                }
+                
+            }
+
+            body
+            {
+                background : rgb( 205, 205, 205 ); 
+                
+            }
+
+            .fc_sm /* font do container */
+            {
+                font-size : 1em;
+                left      : 50%;
+                margin    : 0;
+                position  : absolute;
+                top       : 50%;
+                transform : translate(-50%, -50%);
+            }
+            .a-page
+            {
+                background : #fff;
+                display    : block;
+                height     : 29.7cm; 
+                margin     : auto;
+                width      : 21cm;
+            }
+        
+            .container 
+            {
+                width  : 100%;
+                float    : left;
+                height: 29.7cm;
+                position : relative;
+                padding: 1cm;
+            }
+            /*
+            .aih-paciente {
+                height: 5cm;
+            }
+            .aih-justificativa {
+                height: 5cm;
+            }
+            .aih-procedimento {
+                height: 5cm;
+            }
+            .aih-footer {
+                height: 5cm;
+            }
+            */
+            
+            
+            .row {
+                display: grid;
+                grid-template-columns: repeat(8,1fr);
+            }
+            .row-5 {
+                display: grid;
+                grid-template-columns: repeat(5,1fr);
+            }
+            .row-6 {
+                display: grid;
+                grid-template-columns: repeat(6,1fr);
+            }
+            
+            .c1 { grid-column: auto / span 1; }
+            .c2 { grid-column: auto / span 2; }
+            .c3 { grid-column: auto / span 3; }
+            .c4 { grid-column: auto / span 4; }
+            .c5 { grid-column: auto / span 5; }
+            .c6 { grid-column: auto / span 6; }
+            .c7 { grid-column: auto / span 7; }
+            .c8 { grid-column: auto / span 8; }
+            
+            .logohdml {height: 2cm;}
+            .pront {padding: .5cm; }
+            .laudo { text-align: center; font-size: 10px; }
+            .title {  padding: 5px; font-weight: bold;}
+            .form { display: flex; flex-flow: column; justify-content: center; align-content: center; padding: 2px; }
+            .formcontent { font-size: 14px; padding: 2px; text-transform: uppercase; border-bottom: 1px dotted #000; height: 20px; text-align: left; display: block;}
+            .formlabel { font-size: 8px; height: 10px; text-align: left; }
+            .formbox { border: 1px dotted #000; padding: 4px; }
+            .formlines { height: 24px; border-bottom: 1px dotted #000 }
+            .r1 { height: 1cm; } .r2 { height: 2cm; } .r3 { height: 3cm; }
+            label { font-size: 10px; height: 10px; text-align: left; padding: 2px; display: inline-block; }
+            
+            
+            
+        </style>
+    </head>
+
+    <body class = "size_4x2">
+        <div class = "a-page">
+            <div class = "grid-container">
+                <div class = "container pagina">
+                    <div class="row">
+                        <div class="c8 ">
+                            <span class="">SESAP/RN - Hospital Deoclécio Marques de Lucena</span>
+                        </div>
+                    </div><!-- CLOSE ROW -->
+                    <div class="row">
+                        <div class="c8 pront"><p>PRONTUÁRIO DE INTERNAÇAO</p></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="c8 title"></div>
+                    </div><!-- TITULO -->
+
+                    <div class="row">
+
+                        <div class="c2 form">
+                            <span class="formlabel">CLINICA</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                        <div class="c3 form">
+                            <span class="formlabel">REGULAÇÃO</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                        <div class="c3 form">
+                            <span class="formlabel">PRONTUÁRIO</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                    </div><!-- CLOSE ROW -->
+                    
+                    <div class="row">
+                        <div class="c2 form">
+                            <span class="formlabel">ENFERMARIA Nº</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                        <div class="c1 form">
+                            <span class="formlabel">LEITO</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->         
+                       <div class="c5 form">
+                            <span class="formlabel">OBS</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                    </div><!-- CLOSE ROW -->
+                    
+                    <div class="row">
+                        <div class="c2 form">
+                            <span class="formlabel">CATEGORIA</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                        <div class="c2 form">
+                            <span class="formlabel">GIH</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->  
+                        <div class="c2 form">
+                            <span class="formlabel">DATA</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->  
+                       <div class="c2 form">
+                            <span class="formlabel">HORA</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                    </div><!-- CLOSE ROW -->
+
+                   <div class="row">
+                        <div class="c8 title">Dados do Paciente</div>
+                    </div><!-- TITULO -->
+
+                    <div class="row">
+                        <div class="c6 form">
+                            <span class="formlabel">PACIENTE</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                        <div class="c2 form">
+                            <span class="formlabel">DATA DE NASCIMENTO</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->                            
+                    </div><!-- CLOSE ROW -->
+
+                    <div class="row">
+                        <div class="c4 form">
+                            <span class="formlabel">ESTADO CIVIL</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                        <div class="c4 form">
+                            <span class="formlabel">PROFISSÃO</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                    </div><!-- CLOSE ROW -->
+
+                    <div class="row">
+
+                        <div class="c4 form">
+                            <span class="formlabel">11-NOME DA MÃE</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                        <div class="c4 form">
+                            <span class="formlabel">12-NOME DO PAI</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                    </div><!-- CLOSE ROW -->
+
+                    <div class="row">
+                        <div class="c6 form">
+                            <span class="formlabel">13-NOME DO RESPONSÁVEL</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                        <div class="c2 form">
+                            <span class="formlabel">14-TELEFONE DE CONTATO</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                    </div><!-- CLOSE ROW -->
+
+                    <div class="row">
+                        <div class="c6 form">
+                            <span class="formlabel">15-ENDEREÇO (RUA Nº)</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+
+                        <div class="c2 form">
+                            <span class="formlabel">16-BAIRRO</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                    </div><!-- CLOSE ROW -->
+
+                    <div class="row">
+                        <div class="c3 form">
+                            <span class="formlabel">17-MUNICÍPIO</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                        <div class="c3 form">
+                            <span class="formlabel">18-ESTADO</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                        <div class="c2 form">
+                            <span class="formlabel">19-CEP</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                    </div><!-- CLOSE ROW -->
+
+                    <div class="row">
+                        <div class="c8 title">Diagnóstico</div>
+                    </div><!-- TITULO -->
+
+                    <div class="row">
+                        <div class="c8 form">
+                            <span class="formlabel">DIAGNÓSTICO PROVISÓRIO</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                    </div><!-- CLOSE ROW -->
+                    <div class="row">
+                        <div class="c8 form">
+                            <span class="formlabel">DIAGNOSTICO DEFINITIVO</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                    </div><!-- CLOSE ROW -->
+                    <div class="row">
+                        <div class="c3 form">
+                            <span class="formlabel">DATA DE ADMISSÃO</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                        <div class="c3 form">
+                            <span class="formlabel">ALTA</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                        <div class="c2 form">
+                            <span class="formlabel">ÓBITO</span>
+                            <span class="formcontent"></span>
+                        </div><!-- CLOSE COL -->
+                    </div><!-- CLOSE ROW -->
+                    
+                     <div class="row">
+                        <div class="c8 title">História Clínica</div>
+                    </div><!-- TITULO -->
+
+
+                    <div class="row">
+                        <div class="c8 form">
+                        	<span class="formlines"></span>
+                        	<span class="formlines"></span>
+                        	<span class="formlines"></span>
+                        	<span class="formlines"></span>
+                        	<span class="formlines"></span>
+                        	<span class="formlines"></span>
+                        	<span class="formlines"></span>
+                        	<span class="formlines"></span>
+                        	<span class="formlines"></span>
+                        	<span class="formlines"></span>
+                        	<span class="formlines"></span>
+                        	<span class="formlines"></span>
+                        	<span class="formlines"></span>
+                        	<span class="formlines"></span>
+                        	<span class="formlines"></span>
+                        	<span class="formlines"></span>
+                        	<span class="formlines"></span>
+                        	<span class="formlines"></span>
+                        	<span class="formlines"></span>
+                        </div><!-- CLOSE COL -->
+                    </div><!-- CLOSE ROW -->
+
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
