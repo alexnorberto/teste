@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <base target="_self">
+        <meta name    = "viewport"
+              content = "width=device-width, initial-scale=1.0"
+        >
+
+        <style type = "text/css">
+            *
+            {
+                box-sizing : border-box;
+                margin     : 0;
+                padding    : 0;
+            }
+
+            @media print
+            {
+                @page
+                {
+                    size : A4 portrait;
+                    
+                }
+
+                .a-page
+                {
+                    float             : left;
+                    page-break-inside : avoid;
+                } 
+
+                body
+                {
+                    background : #fff!important; 
+                }  
+            }
+
+            body
+            {
+                background : rgb( 204, 204, 204 ); 
+            }
+
+            .a-page
+            {
+                background : white;
+                display    : block;
+                height     : 29.7cm; 
+                margin     : auto;
+                width      : 21cm;
+            }
+
+            .buffer-region
+            {
+                min-height : 20px;
+            }
+
+            .container /* divs dentro das li */
+            {
+                border : 1px dashed black;
+                width  : calc(100% - 4cm);
+                margin: 2cm;
+                background: blue;
+            }
+
+            .fc_sm /* font do container */
+            {
+                font-size : 1em;
+                left      : 50%;
+                margin    : 0;
+                position  : absolute;
+                top       : 50%;
+                transform : translate(-50%, -50%);
+            }
+
+            .grid-container /* ul */
+            {
+                list-style-type : none;
+                width           : 100%; 
+                background: red;
+            }
+
+            .grid-container .container
+            {
+                float    : left;
+                height   : 100%;
+                position : relative;
+            }
+
+            .size_4x2 li
+            {
+                height : 7.4cm;
+            }
+        </style>
+    </head>
+
+    <body class = "size_4x2">
+    
+        <div class = "a-page">
+            <ul class = "grid-container">
+                <li>
+                    <div class = "container">
+                        <p class = "fc_sm"><span>test</span></p>
+                    </div>
+
+                    <div class = "container">
+                        <p class = "fc_sm"><span>test</span></p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class = "container">
+                        <p class = "fc_sm"><span>test</span></p>
+                    </div>
+
+                    <div class = "container">
+                        <p class = "fc_sm"><span>test</span></p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class = "container">
+                        <p class = "fc_sm"><span>test</span></p>
+                    </div>
+
+                    <div class = "container">
+                        <p class = "fc_sm"><span>test</span></p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class = "container">
+                        <p class = "fc_sm"><span>test</span></p>
+                    </div>
+
+                    <div class = "container">
+                        <p class = "fc_sm"><span>test</span></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class = "buffer-region">
+        </div>
+
+        <div class = "a-page">
+            <ul class = "grid-container">
+                <li>
+                    <div class = "container">
+                        <p class = "fc_sm"><span>test</span></p>
+                    </div>
+
+                    <div class = "container">
+                        <p class = "fc_sm"><span>test</span></p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class = "container">
+                        <p class = "fc_sm"><span>test</span></p>
+                    </div>
+
+                    <div class = "container">
+                        <p class = "fc_sm"><span>test</span></p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class = "container">
+                        <p class = "fc_sm"><span>test</span></p>
+                    </div>
+
+                    <div class = "container">
+                        <p class = "fc_sm"><span>test</span></p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class = "container">
+                        <p class = "fc_sm"><span>test</span></p>
+                    </div>
+
+                    <div class = "container">
+                        <p class = "fc_sm"><span>test</span></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class = "buffer-region">
+        </div>
+
+
+    </body>
+</html>
